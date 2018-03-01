@@ -1,14 +1,24 @@
+<!-- Credit for this code goes to Rodrigo Silveira from www.easlylearntutorial.com -->
+
+<!-- To delete items, double click on them -->
+
 <!DOCTYPE html>
-<html lang='en'>
+<html lang = "en" id="html">
 <head>
-  <meta charset="utf-8"/>
-  <title>todo-list</title>
+  <meta charset="utf-8">
+  <title>To Do List</title>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body class="body">
-  <h1 id="h1">Todo list</h1>
-  <p><input type='text' id='inItemText'/></p>
-  <ul id='addList'></ul>
-  <script src='main.js'></script>
+<body>
+  <div id="bigDiv">
+    <div id="toDoList">
+      <h1 id="h1">To Do List</h1>
+    </div>
+    <div class="border">
+      <input type="text" id="inItemText"><button id="addBtn">Add</button>
+      <li id="addList"></li>
+    </div>
+  </div>
 </body>
+<script src="main.js"></script>
 </html>
