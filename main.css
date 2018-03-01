@@ -1,6 +1,41 @@
-.body{
 
+body{
+  background-image: url("https://www.tops-products.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/5/25-404R_Open.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 900px;
+  min-height: 600px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: lighter;
 }
-#h1{
-  color: blue;
+
+.border{
+  margin-top: 25px;
+  margin-left: 18%;
+  margin-right: 100px;
+  width: 65.5%;
+  text-align: left;
+}
+
+#bigDiv{
+  margin-top: 88px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 1000px;
+  max-width: 730px;
+  align-self: center;
+}
+
+#toDoList{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+#addList{
+  margin-bottom: 10px;
+}
+.div{
+  margin: 100px 0;
+  border-style: solid;
+  border-color: red;
 }
