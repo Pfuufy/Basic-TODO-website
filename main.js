@@ -1,7 +1,5 @@
 //Credit for this code goes to Rodrigo Silveira of www.easlylearntutorial.com
 
-//To delete items, double click on them. 
-
 function updateItemStatus() {
   var cbId = this.id.replace("cb_", "");
   var itemText =  document.getElementById("item_" + cbId);
@@ -19,8 +17,11 @@ function updateItemStatus() {
 }
 
 function deleteItem() {
-  var spanId = this.id.replace("item_", "");
-  document.getElementById("li_" + spanId).style.display = "none";
+  alert('it works')
+  /*var divId = this.id.replace("item_", "");
+  child = document.getElementById("divId");
+  parent = document.getElementById("addDiv");
+  parent.removeChild(child);*/
 }
 
 function addNewItem(list, itemText) {
@@ -29,13 +30,16 @@ function addNewItem(list, itemText) {
   //<input type='checkbox'/>
   //<span>Make todo list</span>
   //</li>
+
   var date = new Date();
   var id = "" + date.getHours() + date.getMinutes() + date.getSeconds() + date.getMilliseconds();
 
-  var listItem = document.createElement('li');
-  listItem.id = "li_" + id;
+  var listItem = document.createElement('div');
+  listItem.className = 'addedDiv';
+  listItem.id = "div_" + id;
 
   var checkBox = document.createElement('input');
+  checkBox.className = "checkBox";
   checkBox.type = 'checkbox';
   checkBox.id = "cb_" + id;
   checkBox.onclick = updateItemStatus;
@@ -43,12 +47,21 @@ function addNewItem(list, itemText) {
   var span = document.createElement('span');
   span.id = "item_" + id;
   span.innerText = itemText;
-  span.ondblclick = deleteItem;
+  //span.ondblclick = deleteItem;
+
+  var delBtn = document.createElement('button');
+  /*delBtn.type = "checkBox";*/
+  delBtn.className = "delBtn"
+  delBtn.id = "item_" + id;
+  delBtn.innerText = "-delete-";
+  delBtn.onclick = deleteItem;
 
   listItem.appendChild(checkBox);
   listItem.appendChild(span);
+  listItem.appendChild(delBtn);
 
   list.appendChild(listItem);
+
 }
 
 var inItemText = document.getElementById('inItemText');
@@ -61,7 +74,7 @@ btnNew.onclick = function() {
     return false;
   };
 
-  addNewItem(document.getElementById('addList'), itemText);
+  addNewItem(document.getElementById('addDiv'), itemText);
 
   inItemText.focus();
   inItemText.select();
@@ -78,9 +91,10 @@ inItemText.onkeyup = function(event) {
       return false;
     };
 
-    addNewItem(document.getElementById('addList'), itemText);
+    addNewItem(document.getElementById('addDiv'), itemText);
 
     inItemText.focus();
     inItemText.select();
   };
 };
+
