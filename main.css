@@ -1,78 +1,77 @@
+body {
+  font-family: 'Permanent Marker', cursive;
+  color: blue;
+}
 
-body{
+#main{
   background-image: url("https://www.tops-products.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/5/25-404R_Open.jpg");
   background-repeat: no-repeat;
   background-position: top;
-  height: 900px;
-  min-height: 600px;
-  font-family: 'Permanent Marker', cursive;
-  font-weight: lighter;
-  font-size: 10pt;
+  margin: 10px;
+  margin: auto;
+  width: 750px;
+  height: 960px;
+  border-style: solid;
+  border-color: white;
 }
 
-#createdList{
-  margin-top: 0px;
-  margin-left: 14%;
-  margin-right: auto;
-  width: 80%;
-  text-align: left;
-}
-
-#bigDiv{
-  margin-top: 70px;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 1000px;
-  max-width: 730px;
-  align-self: center;
-}
-
-#toDoList{
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
+#head{
   text-align: center;
+  margin-top: 90px;
 }
 
-#addList{
-  margin-bottom: 10px;
+#body{
+  margin-left: 120px;
+  max-height: 784.5px;
 }
 
-.delBtn {
-  color: red;
-  margin-left: 10px;
+#addBar{
+  margin-left: 20px;
+  font-size: 12pt;
+}
+
+#inItemText{
   font-family: 'Permanent Marker', cursive;
-  font-size: 8pt;
-  height: 17px;
+  font-size: 12pt;
+  color: blue;
+  width: 475px;
+  height: 20px;
   background: none;
+  margin-bottom: 3px;
   border: none;
 }
 
 #addBtn{
-  color: #7500FF;
-  margin-bottom: 0px;
-  background: none;
   font-family: 'Permanent Marker', cursive;
-  font-size: 10pt;
-  height: 20px;
+  color: black;
+  background: none;
   border: none;
 }
 
-#inItemText{
-  margin-top: 7px;
-  margin-left: 5%;
-  background: none;
-  font-family: 'Permanent Marker', cursive;
-  height: 18px;
-  width: 468px;
-  border: none;
+#addBtn:hover{
+  color: purple;
 }
 
 .checkBox{
-  margin-right: 15px;
-  appearance: none;
+	-webkit-appearance: none;
+	background-color: blue;
+	border: 1px solid #cacece;
+	padding: 5px;
+	border-radius: 50px;
+  margin-right: 5px;
 }
 
-.addedDiv{
-  margin-top: 2px;
+.checkBox:hover{
+  background-color: red;
+}
+
+.checkBox:checked{
+  background-color: red;
+}
+
+.delBtn{
+  font-family: 'Permanent Marker', cursive;
+  color: red;
+  background: none;
+  border: none;
 }
