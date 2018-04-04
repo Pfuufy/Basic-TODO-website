@@ -10,18 +10,9 @@ function updateItemStatus() {
     itemText.style.fontWeight = "800";
   } else {
     itemText.style.textDecoration = "none";
-    itemText.style.color = "#000" ;
+    itemText.style.color = "blue" ;
     itemText.style.fontWeight = "400";
   };
-
-}
-
-function deleteItem() {
-  alert('it works')
-  /*var divId = this.id.replace("item_", "");
-  child = document.getElementById("divId");
-  parent = document.getElementById("addDiv");
-  parent.removeChild(child);*/
 }
 
 function addNewItem(list, itemText) {
@@ -30,13 +21,13 @@ function addNewItem(list, itemText) {
   //<input type='checkbox'/>
   //<span>Make todo list</span>
   //</li>
-
   var date = new Date();
   var id = "" + date.getHours() + date.getMinutes() + date.getSeconds() + date.getMilliseconds();
 
   var listItem = document.createElement('div');
   listItem.className = 'addedDiv';
   listItem.id = "div_" + id;
+  var listID = listItem.id;
 
   var checkBox = document.createElement('input');
   checkBox.className = "checkBox";
@@ -47,21 +38,23 @@ function addNewItem(list, itemText) {
   var span = document.createElement('span');
   span.id = "item_" + id;
   span.innerText = itemText;
-  //span.ondblclick = deleteItem;
 
   var delBtn = document.createElement('button');
-  /*delBtn.type = "checkBox";*/
-  delBtn.className = "delBtn"
+  delBtn.className = "delBtn";
   delBtn.id = "item_" + id;
   delBtn.innerText = "-delete-";
-  delBtn.onclick = deleteItem;
+  delBtn.onclick = function (){
+    // function defined here and not on its own because it needs to access
+    // the id created within this section of code.
+    var elem = document.getElementById(listID);
+    elem.parentNode.removeChild(elem);
+  };
 
   listItem.appendChild(checkBox);
   listItem.appendChild(span);
   listItem.appendChild(delBtn);
 
   list.appendChild(listItem);
-
 }
 
 var inItemText = document.getElementById('inItemText');
@@ -96,5 +89,4 @@ inItemText.onkeyup = function(event) {
     inItemText.focus();
     inItemText.select();
   };
-};
-
+}
