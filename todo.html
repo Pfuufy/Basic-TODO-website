@@ -1,22 +1,27 @@
-<!-- Credit for this code goes to Rodrigo Silveira from www.easlylearntutorial.com -->
+<!-- Credit for this code goes to Rodrigo Silveira of easlylearntutorial.com -->
+<!-- So far, this code works out alright in Chrome and Opera. I've tested it
+in Firefox and Safari and the divs created for each item become misaligne.-->
 
 <!DOCTYPE html>
-<html lang = "en" id="html">
+<html lang = "en">
 <head>
-  <meta charset="utf-8">
   <title>To Do List</title>
+  <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 </head>
 <body>
-  <div id="bigDiv">
-    <div id="toDoList">
-      <h1 id="h1">To Do List</h1>
+  <div id="main">
+    <div id="head">
+      <h1>To Do List</h1>
     </div>
-    <div id="createdList">
-      <input type="text" id="inItemText" maxlength="60"><button id="addBtn">Add</button>
-      <div id="addDiv"></div>
-      <!-- create fancier check boxes. Go to https://www.inserthtml.com/2012/06/custom-form-radio-checkbox/ for more information -->
+    <div id="body">
+      <div id="addBar">
+        <input type="text" id="inItemText" maxlength="54" placeholder="Type Here Cyka"><button id="addBtn">-Add-</button></input>
+      </div>
+      <div id="list">
+        <div id=addDiv></div>
+      </div>
     </div>
   </div>
 </body>
